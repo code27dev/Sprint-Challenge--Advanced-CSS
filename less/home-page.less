@@ -13,6 +13,13 @@
     }
   
   }
+  
+  img{
+    border-radius: 5px;
+    @media @phone {
+      width: 100%;
+    }
+  }
 
   .space-images {
     display: flex;
@@ -24,6 +31,22 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    .blast{
+      @media @phone {
+        width: 100%;
+      }
+
+    }
+    .sky{
+      @media @phone {
+        display: none;
+      }
+    }
+    .launch{
+      @media @phone {
+        display: none;
+      }
     }
   }
 
@@ -45,6 +68,12 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @phone {
+      width: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 15px;
+    }
 
     .walk-text {
       width: 50%;
@@ -57,19 +86,114 @@
         margin-bottom: 26px;
       }
 
-      .btn {
+    .btn {
+      text-decoration: none;
+      a{
+        background-color: @ebony-clay;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 19px;
+        .buttonm(10px,center);
+        @media @phone {
+          width: auto;
+          padding: 25px 20rem;
+          .buttonm(5px,center)
+        }
       }
-    }
+      .btn:hover {
+          background-color: blue;
+          color: palegreen;
+        }
+        @media @phone {
+          width: auto;
+        }
+      }
+  }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        width: auto;
+        display: flex;
+        justify-content: start;
+        padding-bottom: 3rem;
+      }
+     
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+ 
+      
       }
     }
   }
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: rgb(13, 28, 236);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #0494f3;
+  font-size: 2rem;
+}
+.signupbtn {
+  font-size: 2rem;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 500px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
 }// home
